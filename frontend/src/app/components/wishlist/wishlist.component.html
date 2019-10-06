@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-8"></div>
+  <div class="col-lg-4 align-self-end">
+    <div class="input-group">
+      <input type="text" class="form-control" id="Search1" placeholder="Search" autocomplete="off">
+      <span class="input-group-btn">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h2>My Wishlists</h2>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Name</th>
+              <th class="text-right" scope="col">Price</th>
+              <th class="text-center" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let wl of wishlistService.wishlists">
+              <th>{{ wl.product.reference }}</th>
+              <th>{{ wl.product.name }}</th>
+              <th class="text-right">{{ wl.product.price | currency:'USD':true:'1.2-2' }}</th>
+              <th class="text-center">
+                <a (click)="deleteWhislist(wl.productid);" data-toggle="tooltip" data-placement="top" title="Remove from wishlist"><i class="fas fa-trash-alt"></i></a>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

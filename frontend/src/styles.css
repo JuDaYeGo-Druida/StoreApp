@@ -1,0 +1,270 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+body {
+  background-color: #E0E0E0;
+  color: #808080;
+}
+
+.headerbar {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  z-index: 99;
+}
+
+  .headerbar .headerbar-left {
+    background-color: #E0E0E0;
+    float: left;
+    text-align: center;
+    height: 80px;
+    position: relative;
+    width: 250px;
+    z-index: 1;
+  }
+
+    .headerbar .headerbar-left .logo img {
+      max-width: 100px;
+      max-height: 80px;
+      width: auto;
+      height: auto;
+      padding-bottom: 5px;
+    }
+
+a {
+  color: #00055C !important;
+  cursor: pointer !important;
+}
+
+.navbar-collapse {
+  background-color: #fff;
+}
+
+.navbar-custom {
+  border-radius: 0;
+  margin-bottom: 0;
+  margin-left: 250px;
+  min-height: 80px;
+  padding: 0 !important;
+  margin-right: 15px;
+}
+
+.nav-link {
+  min-height: 80px;
+  color: #00055C !important;
+}
+
+  .nav-link:hover {
+    background-color: #00055C;
+    color: white !important;
+  }
+
+  .nav-link .icon-menu {
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .nav-link .text-menu {
+    text-align: center;
+  }
+
+.nav-item {
+  min-width: 150px !important;
+}
+
+ul {
+  width: 100%;
+}
+
+  ul > li {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+.content-page {
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+
+.left-panel {
+  border-right: 0.5px solid #A1A1A1;
+  width: 250px;
+  position: fixed;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+  .left-panel .separator {
+    border-bottom: 0.5px solid #A1A1A1;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .left-panel .filters-one {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+    .left-panel .filters-one .filters-one-items {
+      display: inline-block;
+      font-size: xx-large;
+      width: 40%;
+    }
+
+.right-panel {
+  margin-left: 250px;
+  padding: 0 15px;
+}
+
+.input-group {
+}
+
+  .input-group .input-group-btn {
+    border: 0;
+    background: none;
+    padding: 6px 10px 6px 5px;
+    position: absolute;
+    right: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 9999;
+  }
+
+.row-content {
+  display: flex;
+}
+
+  .row-content .icon {
+    margin: auto 0;
+    width: 5%;
+    font-size: 310%;
+    color: #FCAC27;
+  }
+
+  .row-content .token {
+    margin: auto 0;
+    width: 95%;
+  }
+
+.card {
+  border-radius: 35px !important;
+  margin-top: 35px;
+}
+
+
+
+.content-item {
+  display: flex;
+}
+
+  .content-item .part-date {
+    font-size: large;
+    margin: auto 0 auto 0;
+    width: 20%;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .content-item .part-route {
+    display: flex;
+    border-right: 0.5px solid #A1A1A1;
+    border-left: 0.5px solid #A1A1A1;
+    width: 40%;
+    padding: 0 30px;
+  }
+
+    .content-item .part-route .icon {
+      margin: auto 35px auto 0;
+      font-size: x-large;
+      color: #808080;
+    }
+
+    .content-item .part-route .route {
+      margin: auto 0 auto 0;
+    }
+
+      .content-item .part-route .route .icon {
+        margin: auto 0 auto 0;
+        color: #FCAC27;
+        font-size: xx-large;
+        text-align: center;
+      }
+
+      .content-item .part-route .route .text {
+        font-size: large;
+        text-align: center;
+      }
+
+  .content-item .part-detail {
+    display: inline-flex;
+    width: 50%;
+  }
+
+    .content-item .part-detail .item {
+      padding: 25px;
+    }
+
+    .content-item .part-detail .text {
+      font-size: xx-large;
+    }
+
+    .content-item .part-detail .burble {
+      display: inline-block;
+      margin: auto 0 auto 0;
+      background-color: #C94745;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+    }
+
+      .content-item .part-detail .burble .burble-text {
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        line-height: 0;
+        align-content: center;
+        justify-content: center;
+      }
+
+.center-content {
+  display: flex;
+  margin: 0 auto;
+}
+
+
+.footer-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 400%;
+  color: #FCAC27;
+}
+
+  .footer-btn:hover {
+    color: #FCAC27;
+  }
+
+.toggle-handle {
+  background-color: white;
+}
+
+.toggle-on.btn {
+  background-color: #00055C;
+}
+
+  .toggle-on.btn:active:focus {
+    outline: none;
+  }
+
+.toggle-off.btn {
+  background-color: #808080;
+  color: white;
+}
+
+.btn {
+  border: 0px solid transparent !important;
+}

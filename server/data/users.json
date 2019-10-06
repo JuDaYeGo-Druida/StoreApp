@@ -1,0 +1,23 @@
+{
+  "01702b10-e6b8-11e9-82b9-33ba1ebaae56": {
+    "id": "01702b10-e6b8-11e9-82b9-33ba1ebaae56",
+    "username": "judayego",
+    "password": "123456",
+    "name": "Juan David Yepes",
+    "rol": "admin"
+  },
+  "0e587580-e6b8-11e9-9221-4f8a7f460ba9": {
+    "id": "0e587580-e6b8-11e9-9221-4f8a7f460ba9",
+    "username": "user01",
+    "password": "963258",
+    "name": "User 01",
+    "rol": "customer"
+  },
+  "0088d940-e771-11e9-a2a0-1186870ef211": {
+    "id": "0088d940-e771-11e9-a2a0-1186870ef211",
+    "username": "admin",
+    "password": "qwe123",
+    "name": "Administrator",
+    "rol": "Admin"
+  }
+}

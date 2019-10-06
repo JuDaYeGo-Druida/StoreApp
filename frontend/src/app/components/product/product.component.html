@@ -1,0 +1,86 @@
+
+<div class="row">
+  <div class="col-lg-8">    
+  </div>
+  <div class="col-lg-4 align-self-end">
+    <div class="input-group">
+      <input type="text" class="form-control" id="Search1" placeholder="Search" autocomplete="off">
+      <span class="input-group-btn">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h2>Products List</h2>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Name</th>
+              <th class="text-right" scope="col">Price</th>
+              <th class="text-center" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let prod of productService.products">
+              <th>{{ prod.reference }}</th>
+              <th>{{ prod.name }}</th>
+              <th class="text-right">{{ prod.price | currency:'USD':true:'1.2-2' }}</th>
+              <th class="text-center">
+                <ng-container *ngIf="userService.selectedUser.rol != null; then change1">
+                </ng-container>
+                <ng-template #change1>
+                  <a (click)="saveWhislist(prod.id);" data-toggle="tooltip" data-placement="top" title="Add Wishlist"><i class="fas fa-heart"></i></a>
+                </ng-template>
+                <ng-container *ngIf="userService.selectedUser.rol == 'admin'; then change2">
+                </ng-container>
+                <ng-template #change2>
+                  &nbsp;
+                  <a href="" (click)="editProduct(prod, 'productPopup');" data-toggle="tooltip" data-placement="top" title="Edit Product"><i class="fas fa-pen"></i></a>
+                  &nbsp;
+                  <a href="" (click)="deleteProducto(prod.id);" data-toggle="tooltip" data-placement="top" title="Remove Product"><i class="fas fa-trash-alt"></i></a>
+                </ng-template>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="userService.selectedUser.rol == 'admin'; then change3">
+</ng-container>
+<ng-template #change3>
+  <a class="footer-btn" (click)="openModal('productPopup')"><i class="fas fa-plus-circle"></i></a>
+</ng-template>
+
+
+
+<!-- Modal Popup -->
+<jw-modal id="productPopup">
+  <h2>Product Detail</h2>
+  <form #productForm="ngForm" (ngSubmit)="saveProduct(productForm, 'productPopup')">
+    <input type="hidden" name="id" #_id="ngModel" [(ngModel)]="productService.selectedProducto.id" />
+    <div class="form-group">
+      <label for="InputReference">Reference</label>
+      <input type="text" class="form-control" aria-describedby="referenceHelp" placeholder="Product Reference" name="reference" #reference="ngModel" [(ngModel)]="productService.selectedProducto.reference">
+    </div>
+    <div class="form-group">
+      <label for="InputName">Name</label>
+      <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Product Name" name="name" #name="ngModel" [(ngModel)]="productService.selectedProducto.name">
+    </div>
+    <div class="form-group">
+      <label for="InputPrice">Price</label>
+      <input type="number" class="form-control" aria-describedby="priceHelp" pattern="[0-9]+([\.,][0-9]+)?" placeholder="Product Price" name="price" #price="ngModel" [(ngModel)]="productService.selectedProducto.price">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    &nbsp;
+    <button type="button" (click)="closeModal('productPopup');" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </form>
+</jw-modal>
+

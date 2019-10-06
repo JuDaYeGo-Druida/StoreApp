@@ -1,0 +1,50 @@
+{
+  "b041a3d0-e6bd-11e9-a32a-ab90896d5fce": {
+    "id": "b041a3d0-e6bd-11e9-a32a-ab90896d5fce",
+    "reference": " AP_MBP_13",
+    "name": "Apple MacBook Pro 13-inch",
+    "price": 1800
+  },
+  "ca5d7280-e6bd-11e9-87a1-0fe6995025e6": {
+    "id": "ca5d7280-e6bd-11e9-87a1-0fe6995025e6",
+    "reference": "M8_HTC_5L",
+    "name": "HTC One M8 Android L 5.0 Lollipop",
+    "price": 245
+  },
+  "e4f1a8e0-e6e6-11e9-88ae-892303c98369": {
+    "id": "e4f1a8e0-e6e6-11e9-88ae-892303c98369",
+    "reference": "S10_SAG_SS",
+    "name": "Samsung Galaxy S10",
+    "price": 1000
+  },
+  "4aa58570-e6ed-11e9-a301-9fc76ee47356": {
+    "id": "4aa58570-e6ed-11e9-a301-9fc76ee47356",
+    "reference": "LG_GAMER_700",
+    "name": "Mouse G700s",
+    "price": 79.99
+  },
+  "ebc8bdf0-e6ed-11e9-8f1e-d113ddaef9a4": {
+    "id": "ebc8bdf0-e6ed-11e9-8f1e-d113ddaef9a4",
+    "reference": "SY_NMB_3B",
+    "name": "Headset Sony",
+    "price": 250
+  },
+  "5a486690-e6ee-11e9-9c51-2fb619438753": {
+    "id": "5a486690-e6ee-11e9-9c51-2fb619438753",
+    "reference": "GR_GTM_20",
+    "name": "GrandSteam 2000",
+    "price": 45
+  },
+  "c6a926d0-e6ee-11e9-9feb-33b1a53be0ef": {
+    "id": "c6a926d0-e6ee-11e9-9feb-33b1a53be0ef",
+    "reference": "PR_INTEL_G9",
+    "name": "Intel Core I7-9700k",
+    "price": 650
+  },
+  "f20c7b60-e6ee-11e9-bdbb-d35883f451ed": {
+    "id": "f20c7b60-e6ee-11e9-bdbb-d35883f451ed",
+    "reference": "PR_AMD_R3",
+    "name": "AMD Ryzen 7 9700",
+    "price": 550
+  }
+}
